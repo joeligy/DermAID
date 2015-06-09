@@ -1,0 +1,34 @@
+<template name="results">
+
+	<div class="ui center aligned padded grid info-page">
+		<div class="nine wide column">
+			<h1 class="derm-header">Results</h1>
+		</div>
+		<br>
+		<div class="five wide column">	
+
+			<table class="ui table">
+				<thead>
+					<tr>
+						<th>Looks Like...</th>
+						<th>Confidence</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each results}}
+						<tr>
+							<td><a href="{{pathFor link}}">{{displayType type}}</a></td>
+							<td>{{displayConfidence confidence}}</td>
+						</tr>
+					{{/each}}		
+
+					<tr>
+
+					</tr>
+				</tbody>
+			</table>
+
+		</div>
+	</div>
+
+</template>
